@@ -1,0 +1,43 @@
+Kubernetes
+
+is an orchestration tool for deploying & manageing applications in the Docker Container
+Advantages .
+1. High Availability
+2. scalabale
+3. Restoration in case of failed A
+
+
+
+1. Node - > Pod -> Container
+Pod Can have many containers -> recomended is 1 container per pod 
+Pod is an abstraction layer over container
+Service is attached to a Pod , Service is has an ip address , So een if the Pod dies and gets recreated , it will have the same ipaddress through the pod
+Service can be a external (public) service eg for UI , or a internal(private) service for DB Services or backend 
+Ingress LB is used to communicate to the pods which can have a proper url like https://mydomain.com.
+Deployments are used to create the stateless pods
+Statefulset are used to create the stateless pods.
+Any application config like properties are stored in configMap & secret credentials in secret map
+
+
+Worker Nodes
+3 process run on worker Nodes
+1. Docker runtime
+2. Kubelet
+3 Kube proxy
+
+Master Node
+API Server  - entry point or gateeay to the cluster
+Scheduler  - schedule pods for requests coming from Gateway
+Controller Manager - Monitors/Manages  the state of the pod if a pod is not healthty requests Scheduler to schedule a pod
+etcd : key value pair , maintains the state of cluster , resources available , 
+
+Master Node is less resource intensive , While worker nodes are more resource intensive
+
+Deployments
+kubectl get pods -n gto
+kubectl get services -n gto
+kubectl get deployments -n gto
+kubectl edit deployment deploymentname -n gto
+
+
+

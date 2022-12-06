@@ -1,0 +1,60 @@
+https://docs.docker.com/engine/reference/builder/
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html
+https://docs.amazonaws.cn/en_us/AmazonECS/latest/userguide/fargate-task-defs.html
+
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
+https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
+https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
+EKS DEMO COMMANDS
+eksctl create cluster --name test-cluster1 --version 1.19 --region ap-south-1 --nodegroup-name linux-nodes --node-type t2.medium --nodes 3
+aws eks list-clusters --region=ap-south-1 --output=json
+aws eks describe-cluster --name=test-cluster --region=ap-south-1 --output=json
+kubectl get all --all-namespaces=true
+kubectl create deployment nginx --image=nginx:latest
+kubectl describe deployment/nginx
+kubectl scale deployment/nginx --replicas=4
+kubectl describe deployment/nginx
+kubectl get pods
+
+https://docs.aws.amazon.com/eks/latest/userguide/helm.html
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights.html
+https://aws.amazon.com/premiumsupport/knowledge-center/eks-persistent-storage/
+https://aws.amazon.com/blogs/devops/ci-cd-on-amazon-eks-using-aws-codecommit-aws-codepipeline-aws-codebuild-and-fluxcd/
+
+
+Official Practice question set → https://explore.skillbuilder.aws/learn/course/external/view/elearning/12483/aws-certified-cloud-practitioner-practice-question-set-clf-c01-english 
+
+
+promise is immutable before return ?
+
+
+
+"config": {
+      "_id": "feedback_url",
+      "configValue": "www.shell.com",
+      "status": true,
+	  "configType":"text",
+	  "isActive":true
+    }
+	
+	
+	
+{
+  "_id": {
+    "$oid": "62872f223a39e4e6a93e50da"
+  },
+  "label": "gto",
+  "profile": "dev",
+  "source": {
+    "config": {
+      "name": "feedback_url",
+      "value": "www.shell.com",
+      "status": true,
+	  "type":"text",
+	  "isActive":true
+    }
+  },
+  "modifiedDate": "01/01/2022"
+  "createdDate": "01/01/2022"
+}

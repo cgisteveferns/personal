@@ -1,0 +1,599 @@
+  
+
+
+  
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+    
+    <script type = "text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null;};
+
+    function onVidalHospital(){
+        var insName = 'ORIENTAL INSURANCE COMPANY LIMITED';
+        var content="You are now being redirected to Hospital search page. You have to select the insurance company as "+insName+".Click on OK to continue";
+    	var res = confirm(content);
+		if (res == true) {
+			window.open("https://vidalhealthtpa.com/home/Network-Services/Network-Hospital-List","_blank");
+		}else{
+			document.forms[0].action = "home.htm";
+			document.forms[0].submit();
+		}
+    }
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+        <title>VIDALHEALTH</title>
+        <!-- Bootstrap -->
+        
+        <link rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/vidalhealth/resources/vidal/css/bootstrap-material-datetimepicker.css" /> 
+        <link href="/vidalhealth/resources/vidal/fonts/icon.css" rel="stylesheet">
+        <link href="/vidalhealth/resources/vidal/css/font-awesome.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link  rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/css/screen.css">
+        <link  rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/css/meadia_only.css">
+        <link  rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/css/jquery.jscrollpane.css">
+        <link  rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/css/validationError.css">
+        <link  rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/js/plugins/jquery-ui-1.12.1/jquery-ui.css">
+        <link  rel="stylesheet" type="text/css" href="/vidalhealth/resources/vidal/js/plugins/DataTables/datatables.css">
+	  
+	  
+	    
+       
+
+   
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="/vidalhealth/resources/vidal/js/html5shiv.min.js"></script>
+          <script src="/vidalhealth/resources/vidal/js/respond.min.js"></script>
+        <![endif]-->
+       
+       </head>
+    <body>
+        <!--navBar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header col-sm-2">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                    <a class="navbar-brand " href="#">
+                        <img src="/vidalhealth/resources/vidal/images/vidalHealth_logo2.png" alt="VIDALHEALTH"/></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse col-sm-10" id="bs-example-navbar-collapse-1">
+                	
+                    <ul class="nav navbar-nav">
+                    
+						 <!-- Home Modlue Starts -->
+						 
+                    		
+                              <li>
+		                            
+		                            <a href="/vidalhealth/home.htm"><span class="fa fa-home"></span>&nbsp;&nbsp;Home<span class="sr-only">(current)</span></a> 
+	                         
+                          <!-- Home Modlue End -->
+                              
+                          <!-- Profile Modlue Starts -->
+                          
+	                         
+	                          
+                         <!-- Profile Modlue End -->
+                         
+                          <!-- Pre Enrollment Modlue Starts -->
+                         	
+                          	<!-- Pre Enrollment Modlue End -->
+                          
+                        <!-- Enrollment Modlue Starts -->
+                        
+                         	
+		                         
+									<li><a href="/vidalhealth/enrollment.htm"><span class="icon-enroll ico"></span>enroll </a></li>
+		                         
+		                     
+                         
+                        <!-- Enrollment Modlue End -->
+                         <!-- Coverage Modlue Starts -->
+                         
+                         	
+                         
+                       	<!-- Coverage Modlue End -->
+                       
+                       	<!-- Claims Modlue Starts -->
+                       	
+	                        <li class="dropdown active">
+	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-claims ico"></span>claims<span class="caret"></span><span class="sr-only">(current)</span></a>
+	                            <ul class="dropdown-menu">
+	                            
+	                             
+	                             		
+	                            
+	                            
+	                            
+                            		
+                            			
+                                		
+                                			<li><a href="/vidalhealth/claim/claimSubmissionviewlist.htm?value=claimSubmission">Reimbursement/IPD</a></li>
+                                		
+                                	
+                                		
+                                
+	                            </ul>
+	                        </li>
+                        
+                        <!-- Claims Modlue End -->
+                        
+                        <!-- Ecard Modlue Starts -->
+                        
+                        
+	                        
+	                        	 <li>
+	                        	 
+	                        <a href="/vidalhealth/doEcardMember.htm"><span class="icon-e-card ico"></span>e-card</a></li>
+	                        
+	                      
+						 <!-- Ecard Modlue End -->
+						 
+						  <!-- HospitalSearch Modlue Starts -->
+                        
+                        	 <li>
+                        	  
+                        <a  onclick="javascript:onVidalHospital();"><span class="icon-hospital_serach ico"></span>Hospital</a></li>
+                         <!-- HospitalSearch Modlue End -->
+                         
+                          <!-- Support Modlue Starts -->
+                           
+                            
+                            
+                            <!-- Support Modlue End -->
+                            
+                            <!-- Query Modlue Starts -->
+                            <!-- Added for Accenture CR -->
+                            
+                    </ul>
+                    <!-- Query Modlue End -->
+                            
+                    </ul>
+                    <ul class="nav navbar-nav">
+                    			
+							  
+                              <li>
+                              <a href="#" class="dropdown-toggle profile_pic" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="seq/38357060.htm" alt="Profile pic"/> <span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="/vidalhealth/activities.htm">my activities</a></li>
+                                <li><a href="/vidalhealth/whatsapp.htm">WhatsApp</a></li>
+                                <li><a href="/vidalhealth/chnagepasswordview.htm">change password</a></li>
+                                
+	                                
+	                                
+	   	                                <li><a href="/vidalhealth/portallogout.htm">logout</a></li>
+	                                
+                                
+                             </ul>
+                    </ul>
+                     <!-- Prifilepic Modlue End -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+		
+        <!--navBar Ends       -->
+        <!--Content-->
+        <div class="container-fluid whole_content" style="margin-top: 75px">
+            <!--    left side-->
+            <div class="row">
+   
+
+
+
+
+<form id="leftLinksId" action="selectedPolicyEnrollment.htm" method="post">
+<div class="col-sm-3 sidemenu" >
+<div class="innerContent">
+<h5>Select policy/Years</h5>
+
+	<div class="form-group" style="width:170px;height:5px;padding-left:35px;">
+		<select name="policyYears" id="policyDetails" class="form-control" onchange="javascript:onPolicyYears();">
+			
+				<option  value="20345954" id="policySeqID" data-foo="421500/48/2022/1227-BLR,20345954,38357060,C0789,10/10/2021,stevenmarcel.fernandes@cgi.com,IAN,IAA,OI,2021-2022" >2021-2022</option>
+			
+		</select>
+	</div><br>
+
+
+<ul class="menu">
+
+                  <li class='active'><a href="#" class="policylistname" style="padding-left:10px; line-height:40px" onClick="javascript:onPolicyDetailsViewer('20345954','38357060','421500/48/2022/1227-BLR','OI','PFL','IAN','IAA','BLR_OI_CGI')"> GMC POLICY 2021-2022 <span class="glyphicon glyphicon-right"></span></a></li>          
+			
+</ul>
+</div>
+</div>
+</form>
+
+<script>
+	
+	function onPolicyDetailsViewer(policyseqid, policygrpseqid, policyno, abbrevationcode, policysubgeneraltypeid, intiaccgentypeid, clmsub,templatename) {
+		if (checkObject(document.getElementById("activetab").value)) {
+			var activevalue = document.getElementById("activetab").value;
+			var actionpath="selectedPolicyEnrollment.htm";
+			if (activevalue == 'reimbursements' || activevalue == 'cashless')
+				actionpath = "selectedPolicyClaim.htm";
+			else if(activevalue == 'enroll')
+				actionpath = "selectedPolicyEnrollment.htm";
+			else if(activevalue == 'coverage')
+				actionpath = "coveragePolicy.htm";
+			else if(activevalue == 'ecard')	
+				actionpath = "doPolEcardMember.htm";				
+			else if(activevalue == 'reimbursementssubmission')
+				actionpath = "selectedPolicyclaimSubmission.htm";			
+			
+				document.forms["leftLinksId"].action = actionpath+"?policyseqid="+policyseqid+"&policygrpseqid="+policygrpseqid+"&policyno="+policyno+"&abbrevationcode="+abbrevationcode+"&policysubgeneraltypeid="+policysubgeneraltypeid+"&intiaccgentypeid="+intiaccgentypeid+"&clmsub="+clmsub+"&templatename="+templatename;
+				document.forms["leftLinksId"].submit();
+		}
+	}
+	function checkObject(objToTest) {
+		if (objToTest == null || objToTest == undefined)
+			return false;
+		return true;
+	}
+	
+	function onPolicyYears(){
+		if (checkObject(document.getElementById("activetab").value)) {
+			var e = document.getElementById("policyDetails");
+			var inedx = e.options[e.selectedIndex];
+			var policyListDtls = inedx.getAttribute('data-foo');
+			var activevalue = document.getElementById("activetab").value;
+			var actionpath="policyDetailsYears.htm";
+			if (activevalue == 'reimbursements' || activevalue == 'cashless')
+				actionpath = "selectPolClaimDetails.htm";
+			else if(activevalue == 'enroll')
+				actionpath = "policyDetailsYears.htm";
+			else if(activevalue == 'coverage')
+				actionpath = "coveragePolicy.htm";
+			else if(activevalue == 'ecard')	
+				actionpath = "doPolEcardMember.htm";
+			
+			document.forms["leftLinksId"].action = actionpath+"?policyListDtls="+policyListDtls;
+			document.forms["leftLinksId"].submit();
+		}
+	}
+
+</script>
+
+   
+
+
+
+
+<script type="text/javascript" src="/vidalhealth/resources/vidal/js/claims/claimShorftfallSubmitIpd.js"></script>
+
+<script type="text/javascript">
+function onDocumentViewer(strQuery,claimnumber,claim_dms_reference_id,User_Id,viewuserid,urefno,rolename)
+{
+	//alert(strQuery+""+claimnumber+""+claim_dms_reference_id+" "+User_Id+" "+viewuserid+" "+urefno+" "+rolename);
+	var variable="Claims";
+    var ClaimNo=claimnumber;
+    var dms_reference_number=claim_dms_reference_id;
+	 var userid=User_Id;
+    var roleid=rolename;
+    var Query =strQuery;
+    var IntUrl=strQuery;
+	var param = { 'leftlink' : variable,'claimno' : ClaimNo, 'dms_reference_number' :dms_reference_number ,'userid' : userid ,'roleid' :roleid ,'File' : 'security'};	
+	OpenWindowWithPost(IntUrl, 
+			   "width=730,height=345,left=100,top=100,resizable=yes,scrollbars=yes", 
+			   "NewFile", param);	
+
+	/* var w = screen.availWidth - 10;
+	var h = screen.availHeight - 49;
+	var features = "scrollbars=0,status=1,toolbar=0,top=0,left=0,resizable=0,menubar=0,width="+w+",height="+h;
+	window.open(documentviewer,'',features); */
+}//Ended
+function OpenWindowWithPost(url, windowoption, name, params)
+{
+         var form = document.createElement("form");
+         form.setAttribute("method", "post");
+         form.setAttribute("action", url);
+         form.setAttribute("target", name);
+         
+       
+
+       for (var i in params) {
+     //  alert(" inside for loop");
+            if (params.hasOwnProperty(i)) {
+                 var input = document.createElement('input');
+                 
+                 input.type = 'hidden';
+                 input.name = i;
+                 input.value = params[i];
+                 form.appendChild(input);
+           }
+        }
+         
+         document.body.appendChild(form);
+       // window.open("http://172.16.1.219/DMSApplication/homepage.html?", name, windowoption);
+         
+         form.submit();
+         
+         document.body.removeChild(form);
+ }
+
+function onEdit(template_type, shortfall_seq_id, shortfall_type, v_type, param){
+	document.forms["shotfallID"].action = "doOnlineShorfallXmlReport.htm?template_type="+template_type+"&shortfall_seq_id"+shortfall_seq_id+"&shortfall_type"+shortfall_type+"&v_type"+v_type+"&param"+param;
+	document.forms["shotfallID"].submit();
+}
+function onselectMember(memberseqid)
+{
+	document.forms["claimssummryId"].action = "claimDetailsviewlist.htm?memberseqid="+memberseqid;
+	document.forms["claimssummryId"].submit();
+}
+function showInwardFileList(inward,clm){
+	$("#selectFileLsitDivId").html("");
+	console.log("in showInwardFileList  doc view  :: "+inward);
+	document.documentElement.scrollTop = 0;
+	$("#selectFileLsitDivId").dialog({			  		    
+        
+        open:function(){
+          
+          $(".ui-dialog").find(".ui-widget-header").css("background", "#16a085");
+          $(".ui-dialog").css("margin-top","65px");
+           
+          setTimeout(loadClaimDocsname(inward), 1000);
+        },
+        
+        
+	              autoOpen: true,   
+            	  modal: true ,
+           		  
+	              
+	               title: "File List of ["+clm+"]",  
+             height: 400 ,
+             width: 650,
+             hide: { effect: "explode", duration: 100 },
+             show: {effect: "blind", duration: 100},
+            close :function(){
+              
+               $(this).dialog("destroy");
+            }
+            
+	          });
+}
+	
+	function  loadClaimDocsname(claimSeqId)
+	{
+		var path = "fetchnewclaimdoc.htm";
+		var  objjson = null;
+				$.ajax({
+			        url :path,
+			        async:false,
+			        type:"POST",
+			        data :{
+			        	inward:claimSeqId
+			        },
+			        success : function(responsesuccess) 
+			        {  
+			        	try{
+			        		objjson = JSON.parse(responsesuccess);
+			        	}
+			        	catch( e)
+			        	{
+			        		window.open('/vidalhealth',"_self");
+			        	}
+			        	 
+			        	console.log("success response "+objjson);
+			        	console.log(objjson.path);
+			        	
+			        },error :function (e)
+			        {
+			        	console.log("err response "+e)
+			        	alert(e);
+			        },complete:function(){
+			        	
+			        	if(objjson!=null)
+			        		{
+			        		
+			        		  var htmlstr= "<ul class=\"list-group list-group-flush\">";
+			        		  var filelist = objjson.files;
+			        		  if(filelist!=undefined)
+			        			  {
+			        			   
+				        			  if(filelist.length>0)
+				        			  {
+						        		  for (var i =0 ;i<filelist.length;i++)
+						        		  {
+						        			  htmlstr = htmlstr +"<li class=\"list-group-item\">";
+						        			  var urlpath ="filedownload.htm?path="+objjson.path+"&file="+filelist[i];
+						        			  htmlstr = htmlstr+"  <a style=\"color:blue;cursor: pointer\" href=\""+urlpath+"\" \"><b>"+filelist[i]+"</b></a>";
+						        			  htmlstr = htmlstr+"</li>"
+										}
+						        		  htmlstr = htmlstr+"</ul>"
+						        		  
+						        		  $("#selectFileLsitDivId").html(htmlstr);
+				        			  }
+					        		  else{
+					        			  $("#selectFileLsitDivId").html("<p style='color:red'><b>"+objjson.caption+"</b></p>");
+					        		  }
+			        			  }
+			        		  else{
+			        			  $("#selectFileLsitDivId").html("<p style='color:red'><b>No file uploaded.</b></p>");
+			        			  
+			        		  }
+			        		  
+			        		}
+			        	
+			        }
+		});
+					
+	}
+
+	function onSummaryClose(){
+		document.forms["claimssummryId"].action = "claimSubmissionviewlist.htm?value=claimSubmission";
+		document.forms["claimssummryId"].submit();
+	} 
+</script>
+
+
+				
+                 <!--CenterBox-->
+                <div class="col-sm-9 col-md-9 col-lg-9 middleBlock" style="width:82%;">
+                    <div class="inner">
+                        <!--Breadcrumbs-->
+                        <ol class="breadcrumb">    
+                            <li><a href="#">Summary Details</a></li><span class="glyphicon glyphicon-chevron-right"></span>
+                            <!-- <li class="active">reimbursements</li><span class="glyphicon glyphicon-chevron-right"></span>
+                            <li class="active">claimshortfallsubmissions</li> -->
+                        </ol>
+                        <!--Breadcrumbs ENDS-->
+                        <!--Tabs-->
+                        <div class="cashLess_tabs">
+                            <!-- Nav tabs -->
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div id="claim_submissions" class="tab-pane fade in active">
+                                <form id="claimssummryId" class="common_forms" action="/vidalhealth/claim/claimDetailsviewlist.htm?memberseqid=77420563" method="post" enctype="multipart/form-data">
+                                
+                                <div class="panel panel-default" id="panel-2">
+                                   	<button class="btn btn-default btn-lg btn-reset" style="background-color: #336e66;color: #f8fbf4;float: right;margin-top: 10px;margin-right: 10px;" onclick="javascript:onSummaryClose();" title="Click here to Close" accesskey="c" type="button"><u>C</u>LOSE</button>
+                                    <div>
+                                        <h3>Summary Details:</h3>
+                                    </div>
+                                       	<div class="form-group">
+                                       		<div class="row">
+                                       			 <div class="col-sm-6">
+                                                        <select id="memberSeqID" name="memberSeqID" class="form-control" onchange="onselectMember(this.value)">
+                                    						<option value="">Vidal Health Insurance TPA ID/ Name</option>
+                                    						<option value="77420563">BLR-OI-C0789-001-0008155-E / BENNY FERNANDES</option><option value="77420559">BLR-OI-C0789-001-0008155-A / FERNANDES STEVEN MARCEL</option><option value="77420562">BLR-OI-C0789-001-0008155-C / SHAUN FERNANDES</option><option value="77420560">BLR-OI-C0789-001-0008155-D / SIFALI H S</option><option value="77420561">BLR-OI-C0789-001-0008155-F / SUZANE FERNANDES</option>
+                                						</select>
+                                						<small class="errorClass"></small>
+                                                 </div>
+                                            </div>
+                                       </div>
+                                       
+                                       
+                                        
+                                    <div class="clearfix"></div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tabs ends-->
+                </div>
+            </div>
+            <!--CenterBox ends-->
+            
+           <div id="selectFileLsitDivId" style="display:none;">
+           <table id="FileTable" class="display"
+			style="width: 100%; font-size: 12px;">
+           </table>
+           </div>
+                
+				<div class="cpopBox"><div class="overlay_black"></div><div class="c_popUps"><a href="#" class="c_close"></a><div class="icon_box"><span class="icon-error2"></span></div><p>Some Problem Occurred Please Contact Administrator</p></div></div>
+   
+   
+
+
+
+
+     </div>
+     </div>
+             
+     
+          <!--Footer-->
+          <br><br><br>
+        <footer class="navbar navbar-fixed-bottom">
+            <div class="col-sm-6">
+                <ul class="ft_links">
+                <li><a href="/vidalhealth/portalContact.htm">About Us</a></li>
+                <li><a href="/vidalhealth/disclaimer.htm">Disclaimer</a></li>
+                <li><a href="/vidalhealth/privacyPolicy.htm">Privacy Policy</a></li>
+                <li><a href="/vidalhealth/termsOfUse.htm">Terms of Use</a></li>
+                <li><a href="/vidalhealth/contactUs.htm">Contact Us</a></li>
+            </ul>
+            </div>
+            <div class="col-sm-6">
+            <p class="copy pull-right">
+                Powered by <a href="#">Vidal Health.</a> &copy; Copyright 2015. All Rights Reserved.
+            </p>
+            </div>
+        </footer>
+        <!--Footer ends-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/vidalhealth/resources/vidal/js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/vidalhealth/resources/vidal/js/scripts.js"></script>
+        <script src="/vidalhealth/resources/vidal/js/jquery.mousewheel.js"></script>
+        <script src="/vidalhealth/resources/vidal/js/jquery.jscrollpane.min.js"></script>
+        <script src="/vidalhealth/resources/vidal/js/moment.js"></script>
+        <script src="/vidalhealth/resources/vidal/js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="/vidalhealth/resources/vidal/js/jquery.js"></script>
+        <script src="/vidalhealth/resources/vidal/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/vidalhealth/resources/vidal/js/material.min.js"></script>
+        <script type="text/javascript" src="/vidalhealth/resources/vidal/js/moment-with-locales.min.js"></script>
+       
+        <script type="text/javascript" src="/vidalhealth/resources/vidal/js/plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="/vidalhealth/resources/vidal/js/plugins/DataTables/datatables.js"></script>
+        
+        
+        
+        <script type="text/javascript">
+        	$(document).ready(function(){
+	  		  	$('#date, #date1').bootstrapMaterialDatePicker({ weekStart : 0, time: false, format: 'DD-MM-YYYY' });
+			});
+        </script>
+        
+         <script>
+        
+        $(".carousel-indicators li:first").addClass("active");
+        $('.item').first().addClass('active');
+        
+        </script>
+        
+         
+          
+           
+         
+	           
+	         
+         
+         
+	         <script type="text/javascript">
+			         $(window).on('load',function(){
+			             $('#myWiproConsentModel').modal('show');
+			         });
+		     </script>
+	     
+	     
+	         <script type="text/javascript">
+			         $(window).on('load',function(){
+			             $('#myGoogleConsentModel').modal('show');
+			         });
+		     </script>
+	     
+        <script type="text/javascript">
+            $(function ()
+            {
+                $('.scroll-pane').jScrollPane();
+            });
+        </script>   
+        <script type="text/javascript">
+			ClaimsOPDDatePicker();
+		</script>
+    </body>
+</html>
+
+   

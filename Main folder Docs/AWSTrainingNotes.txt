@@ -1,0 +1,37 @@
+https://aws.amazon.com/s3/storage-classes/
+
+public 3:08 PM
+Nivea (Organizer)to Everyone
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html
+
+public 3:18 PM
+Nivea (Organizer)to Everyone
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html
+
+https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
+
+public 3:47 PM
+Nivea (Organizer)to Everyone
+https://aws.amazon.com/inspector/
+
+public 3:47 PM
+Nivea (Organizer)to Everyone
+https://www.aws.training/Details/Curriculum?id=20685
+
+https://aws.amazon.com/compliance/shared-responsibility-model/
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html
+
+https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html
+
+public 4:42 PM
+Nivea (Organizer)to Everyone
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html
+
+https://aws.amazon.com/ec2/instance-types/
+
+pillaipr@amazon.com - discount for AWS certification

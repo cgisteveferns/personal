@@ -1,0 +1,134 @@
+var person = {
+    _name: 'John Doe',
+    getName: function () {
+        return this._name;
+    }
+};
+
+
+var getIdentity = person.getName;
+
+
+console.log(getIdentity());
+console.log(person.getName());
+
+
+var x = 21;
+var human = function () {
+    console.log(x);
+    var x = 20;
+};
+human();
+
+(function (x) {
+    return(function (y) {
+        console.log(x);
+    })(2)
+})(1);
+
+enclosure
+pure component
+redux works
+local storage / session storage
+new html tags
+higer order function
+1 + + "2" + "2"
+"A" - "B" + "2"
+console.log(false === '0')
+console.log(false == '0')
+
+
+var a = {},
+    b = {
+        key: 'b'
+    },
+    c = {
+        key: 'c'
+    };
+
+
+a[b] = 123;
+a[c] = 456;
+
+
+console.log(a[b]);
+
+
+console.log((function f(n) {
+    return((n > 1) ? n * f(n - 1) : n)
+})(10));
+
+
+(function (x) {
+    return(function (y) {
+        console.log(x);
+    })(2)
+})(1);
+closure
+
+var person = {
+    _name: 'John Doe',
+    getName: function () {
+        return this._name;
+    }
+};
+
+
+var getIdentity = person.getName;
+
+
+console.log(getIdentity());
+console.log(person.getName());
+
+var x = 21;
+var man = function () {
+    console.log(x);
+    var x = 20;
+};
+man();
+
+
+// curring
+// scope & scope chain
+// arrow functions
+// object array destructure
+let myArr = ["Ramesh", "Babu", "xyz"]
+let [name, lastNmae, info] = myArr
+
+// event propagation, bubbling , capturing
+// generators
+// map set
+// features of ES6
+// React - virtual DOM , singe way data binding , components, passing props
+// not a framework
+// What are keys in React
+const ids = [
+    1,
+    2,
+    3,
+    4,
+    5
+];
+
+// {
+// ids && ids.map((id) => <li key={id}> {
+//       id
+// } < /li> )
+
+// }
+
+// //return (<div> {
+// ids && ids.map((id) => {
+
+//       return <li key={id}> {id}</li>
+// //})
+// } </div>)
+// error boundaries
+// hooks
+// child to parent - callbacks or custommhooks
+// redux middleware -thunk
+
+
+npm config set proxy http://proxy-ap.shell.com:8080/
+npm config set strict-ssl false
+npm config set legacy-peer-deps true

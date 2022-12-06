@@ -1,0 +1,24 @@
+functional interface default methods
+Mongodb table id
+Spring boot custom code execution on startup
+Disadvantages of Microservice
+Design patterns in MicroService
+Latest features of Java 18
+Static Java class
+S3 bucket search with file content
+Kafka consumers & partition relationship
+concurrent Hashmap read/write
+static import
+functional programming in Java
+wearemiq
+
+Primary & Qualifier
+Two way commit
+Saga Pattern
+Dqueue & Stack
+Kibana & Elastic Stack
+Reactive Programming in Java
+Resilent
+Responsive
+Elastic
+Messaging

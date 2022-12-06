@@ -1,0 +1,51 @@
+az ad sp create-for-rbac --name http://myappname --role contributor --sdk-auth
+
+{
+  "clientId": "88daeaf6-bf68-436d-ae07-84a911f8abd0",
+  "clientSecret": "2gD9Ealz1bpu7c-Raro8CCfg1Rr4Mt-E2U",
+  "subscriptionId": "6a8cdc61-1132-4cb3-bec0-4b3334a6fa2a",
+  "tenantId": "087840ac-41c3-48ad-8293-03ec5dd11c6c",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
+
+
+on:
+   workflow_run:
+     workflows: ["CI to Docker Hub"]
+     branches: [main]
+     types:
+       - completed
+
+jobs:
+ run-aci:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v2
+
+- name: Install Docker Compose CLI
+       run: >
+         curl -L https://raw.githubusercontent.com/docker/compose-cli/main/scripts/install/install_linux.sh | sh
+
+- name: "login azure"
+       run: "docker login azure --client-id $AZURE_CLIENT_ID --client-secret $AZURE_CLIENT_SECRET --tenant-id $AZURE_TENANT_ID"
+       env:
+         AZURE_TENANT_ID: '${{ secrets.AZURE_TENANT_ID }}'
+         AZURE_CLIENT_ID: '${{ secrets.AZURE_CLIENT_ID }}'
+         AZURE_CLIENT_SECRET: '${{ secrets.AZURE_CLIENT_SECRET }}'
+
+- name: "Create an aci context"
+       run: 'docker context create aci --subscription-id $AZURE_SUBSCRIPTION_ID --resource-group Docker --location southindia acicontext'
+       env:
+         AZURE_SUBSCRIPTION_ID: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+
+- name: "Run my App"
+       run: 'docker --context acicontext run -d --name discovery --domainname discovery -p 8085:8085 steveferns/discovery'
+ 
+     - name: "Test deployed server"
+       run: 'curl http://discovery.southindia.azurecontainer.io/'

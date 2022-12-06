@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mongodb-svc","namespace":"gto-test"},"spec":{"ports":[{"port":27017,"protocol":"TCP","targetPort":27017}],"selector":{"app":"mongodb"}}}
+  creationTimestamp: "2022-02-19T18:23:17Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":27017,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2022-02-19T18:23:17Z"
+  name: mongodb-svc
+  namespace: gto-test
+  resourceVersion: "268145785"
+  selfLink: /api/v1/namespaces/gto-test/services/mongodb-svc
+  uid: fd4af875-ef67-4c19-98dc-0221de49a2dd
+spec:
+  clusterIP: 172.20.12.141
+  ports:
+  - port: 27017
+    protocol: TCP
+    targetPort: 27017
+  selector:
+    app: mongodb
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

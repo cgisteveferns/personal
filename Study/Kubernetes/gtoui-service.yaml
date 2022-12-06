@@ -1,0 +1,96 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/aws-zone-type-private: "true"
+    external-dns.alpha.kubernetes.io/hostname: gto-ui.aws-us-east-1.dev-apps.sdu-rds.com.
+    meta.helm.sh/release-name: gto
+    meta.helm.sh/release-namespace: gto
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:355262519757:certificate/539ed8de-3304-4df7-833c-b2eb504988be
+  creationTimestamp: "2022-01-20T14:34:25Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app.kubernetes.io/instance: gto
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: gto
+    app.kubernetes.io/version: 973-20220208-21d23a4-20220219-48ef9a9
+    helm.sh/chart: gto-0.1.0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:external-dns.alpha.kubernetes.io/aws-zone-type-private: {}
+          f:external-dns.alpha.kubernetes.io/hostname: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+          f:service.beta.kubernetes.io/aws-load-balancer-backend-protocol: {}
+          f:service.beta.kubernetes.io/aws-load-balancer-internal: {}
+          f:service.beta.kubernetes.io/aws-load-balancer-ssl-cert: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/name: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: terraform-provider-helm_v2.4.1_x5
+    operation: Update
+    time: "2022-01-20T14:34:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"service.kubernetes.io/load-balancer-cleanup": {}
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2022-01-20T14:34:31Z"
+  name: gto-ui-svc
+  namespace: gto
+  resourceVersion: "267911886"
+  selfLink: /api/v1/namespaces/gto/services/gto-ui-svc
+  uid: c82d2b00-b9dc-44f8-8d6a-328b993b7537
+spec:
+  clusterIP: 172.20.169.48
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31299
+    port: 443
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: gto-ui
+    app.kubernetes.io/instance: gto
+    app.kubernetes.io/name: gto
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - hostname: internal-ac82d2b00b9dc44f88d6a328b993b753-776839722.us-east-1.elb.amazonaws.com

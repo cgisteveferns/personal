@@ -1,0 +1,8 @@
+1. Define MVP  (Define Minimum viable product)
+2. Estimation of Scale 
+   Store data , Sharding (Sharding is dividing the data & storing data in multiple machines)
+   Read heavy , Write heavy ,QPS
+3. Design Goals 
+   Availability , Consistencey , Latency
+4. Design API
+   Design Challenges

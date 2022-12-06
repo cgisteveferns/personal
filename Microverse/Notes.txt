@@ -1,0 +1,5 @@
+freeCodeCamp
+Codecademy
+Learneroo
+Exercism.io
+odin project
