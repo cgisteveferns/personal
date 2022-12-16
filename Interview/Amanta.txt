@@ -22,3 +22,27 @@ Resilent
 Responsive
 Elastic
 Messaging
+Kafka - advantages
+Docker container - Memory
+HTTP methods , GET POST,PUT & ?
+Controller request params annotations
+AWS Serverless features
+Microservices CKQLF Design
+Microservices 20 design Principles
+Microservices Deployment 
+CORS - postman & Browser
+Garbage Collector
+JIT
+Life cycle of Java Object
+What is Rest API
+Java Reference methods
+Multithreading concepts
+Have Tree Relatonship in NOSQL
+Functional interfaces of Java 8
+How to calculate memory requirements for a microservice
+400 errors
+500 errors
+DAta type used to store files images in NO SQL
+What are the advantages of Lamda function
+
+
